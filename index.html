@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html manifest="upsidedown.manifest">
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;" />
+    <meta name="format-detection" content="telphone=no" />
+    
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-" content="true"/>
+    
+    <title>hello world</title>
+    <!--触摸事件的兼容封装-->
+    <script type="text/javascript" src="libs/touchfix.js" ></script>
+    <!--描述：fastclick-->
+    <script type="text/javascript" src="libs/fastclick.js" ></script>
+    <!--jquery2.1.1-->
+    <script type="text/javascript" src="libs/jquery-1.8.3.js" ></script>
+    
+    <script type="text/javascript" src="libs/json2.js" ></script>
+    <!--jquery dialog-->
+    <script type="text/javascript" src="libs/dialog/dialog.js" ></script>
+    <link rel="stylesheet" href="libs/dialog/dialog.css" />
+    
+    <!--游戏引擎-->
+    <script type="text/javascript" src="libs/simpleH5/simpleInherit.js" ></script>
+    <script type="text/javascript" src="libs/simpleH5/spirit.js" ></script>
+    <script type="text/javascript" src="libs/simpleH5/config.js" ></script>
+    <script type="text/javascript" src="libs/simpleH5/simpleH5.js" ></script>
+    <!--游戏代码-->
+    <script type="text/javascript" src="game/util.js" ></script>
+    <script type="text/javascript" src="game/spirits/Block.js" ></script>
+    <script type="text/javascript" src="game/spirits/Label.js" ></script>
+    <script type="text/javascript" src="game/app.js" ></script>
+    
+    
+	<!--样式设置-->
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script type="text/javascript" src="js/index.js" ></script>
+    
+</head>
+<body style="background: #ffffff;">
+	<div id="canvasContainer">
+		<canvas id="canvas" style="background: #ffffff;"></canvas>
+	</div>
+	<div id="startpage">
+		<ul class="center">
+			<li>开始游戏</li>
+			<li>游戏模式:<br />
+				<select id="gameMode" name="gameMode">
+					<option value="0">普通版</option>
+					<option value="1">有点难</option>
+					<option value="2">比较难</option>
+					<option value="3">非常难</option>
+				</select>
+			</li>
+			<li>声音设置</li>
+			<li>排行榜</li>
+			<li>帮助</li>
+		</ul>
+	</div>
+	
+	<!--<div id="dialog-gameMode" style="display: none;">
+		<table class="dialog-gameMode">
+			<tr>
+				<td>难度:</td>
+				<td><select name="gameMode">
+					<option value="0">普通版</option>
+					<option value="1">有点难</option>
+					<option value="2">比较难</option>
+					<option value="3">非常难</option>
+				</select></td>				
+			</tr>
+			<div>
+				<td>随机位置:</td>
+				<td><select name="maxColumn">
+					<option value="1">1列</option>
+					<option value="2">2列</option>
+					<option value="3">3列</option>
+					<option value="4">4列</option>
+				</select></td>
+			</div>
+		</table>
+	</div>-->
+	<div id="dialog-showBlockTypeMap" style="display: none;">
+		<table class="dialog-showBlockTypeMap" cellpadding="0" cellspacing="5px">
+		<!--"#f30","#3f3","#09f","#03f","#f90"-->
+			<tr>
+				<td class="bg_red"><img src="img/iconfont-up.png"/></td>
+				<td><img src="img/toright.png"/></td>
+				<td class="bg_red"><img class="forup" src="img/iconfont-up.png"/></td>
+			</tr>
+			<tr>
+				<td class="bg_green"><img src="img/iconfont-down.png"/></td>
+				<td><img src="img/toright.png"/></td>
+				<td class="bg_green"><img class="fordown" src="img/iconfont-down.png"/></td>
+			</tr>
+			<tr>
+				<td class="bg_blue"><img src="img/iconfont-left.png"/></td>
+				<td><img src="img/toright.png"/></td>
+				<td class="bg_blue"><img class="forleft" src="img/iconfont-left.png"/></td>
+			</tr>
+			<tr>
+				<td class="bg_orange"><img src="img/iconfont-right.png"/></td>
+				<td><img src="img/toright.png"/></td>
+				<td class="bg_orange"><img class="forright" src="img/iconfont-right.png"/></td>
+			</tr>
+		</table>
+	</div>
+	<div id="dialog-gameOver" style="display: none;">
+		<p>%s</p>
+		<table>
+			<tr>
+				<td><button onclick="window.location.reload();">返回</button></td>
+				<td><button onclick="app.gameRestart();">重新开始</button></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

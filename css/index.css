@@ -1,0 +1,84 @@
+
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
+/**
+ * 本段"抄袭"自 intel的appframework（原jqmobi），可以去除wp手机讨厌的网页跟着滑动效果，真是太好了!!
+ */
+* {
+    -webkit-user-select:none; /* Prevent copy paste for all elements except text fields */
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* set highlight color for user interaction */
+    -moz-tap-highlight-color:rgba(0, 0, 0, 0); /* set highlight color for user interaction */
+    -ms-touch-action:none;
+    -moz-user-select:-moz-none;
+    -webkit-touch-callout: none; /* prevent the popup menu on any links*/
+    margin:0;
+    padding:0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+body,ul,li,canvas{
+	margin: 0;
+	padding: 0;
+	border: none; 
+}
+.bg_red{
+	background: #f30;
+}
+.bg_green{
+	background: #3f3;
+}
+.bg_blue{
+	background: #09f;
+}
+.bg_orange{
+	background: #f90;
+}
+#canvasContainer{
+	background: #ffffff;
+	overflow:visible;
+	-webkit-transform: translateZ(0);
+}
+
+#canvas{
+	margin: 0;
+	padding: 0;
+	border: none;
+	display: block;
+}
+
+#startpage{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+#startpage ul{
+	width: 116px;
+	height: 245px;
+	text-align: center;
+    list-style: none;
+	opacity: 0;
+}
+#startpage ul li{
+	font-size: 24px;
+	padding: 6px 3px;
+	color: #f00;
+	border: 1px solid #999;
+}
+
+select[name=maxColumn]{
+	width: 100%;
+}
+
+.dialog-showBlockTypeMap img{
+	width: 60px;
+	height: 60px;
+}
+
